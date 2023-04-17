@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sit323-prac5p
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sit323-prac5p
+  template:
+    metadata:
+      labels:
+        app: sit323-prac5p
+    spec:
+      containers:
+      - name: sit323-prac5p
+        image: arandhawa98/sit323-prac5p:latest
+        ports:
+        - containerPort: 8080
